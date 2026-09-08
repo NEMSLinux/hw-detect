@@ -331,7 +331,7 @@ elif [ -f /etc/.nems_hw_model_identifier ]; then
     model_name='ODROID C0/C1/C1+'
 
   #ODROID-N2
-  elif (( $model_code == 15 )); then
+  elif (( $model_code == 15 || $model_code == 16 )); then
     MEMTOTAL=$(free | awk '/^Mem:/{print $2}')
     if (( $MEMTOTAL > 3800000 )); then
       model_name='ODROID-N2 (4 GB)'
